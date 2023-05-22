@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
     // Set recipient email address
-   $to = 'elavarasan5193@gmail.com';
+   $to = 'rpkidscare19@gmail.com';
     
     
     $subject = 'New Notification from the Website';
