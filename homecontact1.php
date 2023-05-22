@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // Collect form data
    $name = $_POST['name'];
-   $phone = $_POST['phone_number'];
+   $phone = $_POST['phone'];
    $email = $_POST['email'];
    $message1 = $_POST['message'];
 
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Email sent successfully
       $response = array(
          'success' => true,
-         'message' => 'Thank you for your submission! We will contact you back!'
+         'message' => 'Thank you for your submission! We will contact you back!..'
       );
    } else {
       // Failed to send email
