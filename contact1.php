@@ -1,30 +1,37 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   // Collect form data
-   $name = $_POST['name'];
-   $phone = $_POST['phone_number'];
-   $email = $_POST['email'];
-   $msg_subject = $_POST['msg_subject'];
-   $message1 = $_POST['message'];
+   
+    // Set recipient email address
+   $to = 'elavarasan5193@gmail.com';
+    
+    
+    $subject = 'New Notification from the Website';
 
-   // Set recipient email address
-   $recipient = 'elavarasan5193@gmail.com';
+     // Collect form data
+
+   $name = $_POST['name1'];
+   $phone = $_POST['phone1'];
+   $email = $_POST['email1'];
+   $msg_subject = $_POST['msg_subject1'];
+   $message1 = $_POST['message1'];
+
+  
 
    // Set subject
-   $subject = 'Enquiry Notification';
 
    // Build the email content
-   $message = "Name: $name\n";
-   $message .= "Phone: $phone\n";
-   $message .= "Email: $email\n";
-   $message .= "Subject: $msg_subject\n";
-   $message .= "Message: $message1\n";
+   $email_body = "Name: $name\n";
+   $email_body .= "Phone: $phone\n";
+   $email_body .= "Email: $email\n";
+   $email_body .= "Subject: $msg_subject\n";
+   $email_body .= "Message: $message1\n";
 
    // Set headers
-   $headers = "From: $name <$email>";
-
+   $headers = "From: " . $email . "\r\n";
+   $headers .= "Reply-To: " . $email . "\r\n";
+   
    // Send the email
-   if (mail($recipient, $subject, $message, $headers)) {
+   if (mail($to, $subject, $email_body, $headers)) {
       // Email sent successfully
       $response = array(
          'success' => true,
