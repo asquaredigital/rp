@@ -11,12 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    $recipient = 'elavarasan5193@gmail.com';
 
    // Set subject
-   $subject = $msg_subject ;
+   $subject = 'Enquiry Notification';
 
    // Build the email content
    $message = "Name: $name\n";
    $message .= "Phone: $phone\n";
    $message .= "Email: $email\n";
+   $message .= "Subject: $msg_subject\n";
    $message .= "Message: $message1\n";
 
    // Set headers
