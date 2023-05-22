@@ -2,21 +2,22 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // Collect form data
    $name = $_POST['name'];
-   $phone = $_POST['phone'];
+   $phone = $_POST['phone_number'];
    $email = $_POST['email'];
+   $msg_subject = $_POST['msg_subject'];
    $message1 = $_POST['message'];
 
    // Set recipient email address
    $recipient = 'elavarasan5193@gmail.com';
 
    // Set subject
-   $subject = 'Enquiry Notification';
+   $subject = $msg_subject ;
 
    // Build the email content
    $message = "Name: $name\n";
    $message .= "Phone: $phone\n";
    $message .= "Email: $email\n";
-   $message .= "Service: $message1\n";
+   $message .= "Message: $message1\n";
 
    // Set headers
    $headers = "From: $name <$email>";
