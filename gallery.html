@@ -45,6 +45,59 @@
             $("#footer").load("footer.html");
             });
             </script>
+
+<style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px; /* Adjust the height as per your preference */
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      display: block;
+      margin: 10% auto;
+      max-width: 800px;
+    }
+
+    .modal-content img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+  </style>
     </head>
 
     <body>
@@ -65,53 +118,7 @@
         <!-- End Header Area -->
 
         <!-- Sidebar Modal -->
-        <div class="sidebar-modal">
-            <div class="sidebar-modal-inner">
-                <div class="sidebar-about-area">
-                    <div class="title">
-                        <h2>About Us</h2>
-                        <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
-                    </div>
-                </div>
-
-                <div class="sidebar-instagram-feed">
-                    <h2>Instagram</h2>
-
-                    <ul>
-                        <li><a href="#"><img src="assets/img/blog-image/1.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/2.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/3.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/4.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/5.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/6.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/7.jpg" alt="image"></a></li>
-                        <li><a href="#"><img src="assets/img/blog-image/8.jpg" alt="image"></a></li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-contact-area">
-                    <div class="sidebar-contact-info">
-                        <div class="contact-info-content">
-                            <h2>
-                                <a href="tel:+0881306298615">+088 130 629 8615</a>
-                                <span>OR</span>
-                                <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#95fdf0f9f9fad5fef9f0e3f9bbf6faf8"><span class="__cf_email__" data-cfemail="3e565b5252517e55525b48105d5153">[email&#160;protected]</span></a>
-                            </h2>
-    
-                            <ul class="social">
-                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="close-btn sidebar-modal-close-btn"><i class="flaticon-cross"></i></span>
-            </div>
-        </div>
+      
         <!-- End Sidebar Modal -->
 
         <!-- Start Page Title Area -->
@@ -120,10 +127,10 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="page-title-content">
-                            <h2>Team</h2>
+                            <h2>Gallery</h2>
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li>Team</li>
+                                <li>Gallery</li>
                             </ul>
                         </div>
                     </div>
@@ -131,174 +138,64 @@
             </div>
         </div>
         <!-- End Page Title Area -->
+        <div style="height: 100px;">
 
-        <!-- Start Doctor Area -->
-        <section class="doctor-area pt-100 pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/1.jpg" alt="image">
-                            </div>
+        </div>
 
-                            <div class="content">
-                                <h3>Dr. Smith Jorge</h3>
-                                <span>General Dentist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 col-md-6 col-sm-6">
                     </div>
+               
+                <div class="col-lg-10 col-md-6 col-sm-6">
+                    <h1>Image Gallery</h1>
+                    <div class="gallery">
+                    <img src="assets/img/img (1).jpg" alt="Image 1" onclick="openModal('assets/img/img (1).jpg')">
+                    <img src="assets/img/img (2).jpg" alt="Image 2" onclick="openModal('assets/img/img (2).jpg')">
+                    <img src="assets/img/img (3).jpg" alt="Image 3" onclick="openModal('assets/img/img (3).jpg')">
+                    <img src="assets/img/img (4).jpg" alt="Image 3" onclick="openModal('assets/img/img (4).jpg')">
+                    <img src="assets/img/img (5).jpg" alt="Image 3" onclick="openModal('assets/img/img (5).jpg')">
+                    <img src="assets/img/img (7).jpg" alt="Image 3" onclick="openModal('assets/img/img (7).jpg')">
+                    <img src="assets/img/img (8).jpg" alt="Image 3" onclick="openModal('assets/img/img (8).jpg')">
+                    <img src="assets/img/img (9).jpg" alt="Image 3" onclick="openModal('assets/img/img (9).jpg')">
+                    <img src="assets/img/img (10).jpg" alt="Image 3" onclick="openModal('assets/img/img (10).jpg')">
 
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/2.jpg" alt="image">
-                            </div>
+                    <img src="assets/img/img (11).jpg" alt="Image 3" onclick="openModal('assets/img/img (11).jpg')">
+                    <img src="assets/img/img (12).jpg" alt="Image 3" onclick="openModal('assets/img/img (12).jpg')">
 
-                            <div class="content">
-                                <h3>Dr. Aston Alison</h3>
-                                <span>Orthodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <!-- Add more images here -->
+                </div>
+      
+                    <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Modal Image">
                     </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/3.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Donny Jazz</h3>
-                                <span>Periodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/4.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Moris Johonson</h3>
-                                <span>Endodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/5.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Smith Jorge</h3>
-                                <span>General Dentist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/6.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Aston Alison</h3>
-                                <span>Orthodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/7.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Donny Jazz</h3>
-                                <span>Periodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-doctor-box">
-                            <div class="image">
-                                <img src="assets/img/doctor-image/8.jpg" alt="image">
-                            </div>
-
-                            <div class="content">
-                                <h3>Dr. Moris Johonson</h3>
-                                <span>Endodontist</span>
-
-                                <ul class="social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="col-lg-1 col-md-6 col-sm-6">
+                </div>
+        </div>
+        </div>
+      
+        <script>
+            function openModal(imageUrl) {
+              var modal = document.getElementById("myModal");
+              var modalImage = document.getElementById("modalImage");
+              modal.style.display = "block";
+              modalImage.src = imageUrl;
+            }
+        
+            function closeModal() {
+              var modal = document.getElementById("myModal");
+              modal.style.display = "none";
+            }
+          </script>
         <!-- End Doctor Area -->
+
+        <div style="height: 100px;">
+
+        </div>
 
         <!-- Start CTA Area -->
         <section class="cta-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -316,41 +213,7 @@
         <!-- End CTA Area -->
 
         <!-- Start Partner Area -->
-        <section class="partner-area">
-            <div class="container">
-                <div class="partner-slides owl-carousel owl-theme">
-                    <div class="single-partner-item">
-                        <a href="#">
-                            <img src="assets/img/partner-image/1.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-partner-item">
-                        <a href="#">
-                            <img src="assets/img/partner-image/2.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-partner-item">
-                        <a href="#">
-                            <img src="assets/img/partner-image/3.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-partner-item">
-                        <a href="#">
-                            <img src="assets/img/partner-image/4.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-partner-item">
-                        <a href="#">
-                            <img src="assets/img/partner-image/5.png" alt="image">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- End Partner Area -->
 
         <!-- Start Footer Area -->
