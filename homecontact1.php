@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // Collect form data
    $name = $_POST['name'];
-   $phone = $_POST['phone'];
+   $phone = $_POST['phone_number'];
    $email = $_POST['email'];
    $message1 = $_POST['message'];
 
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    $message = "Name: $name\n";
    $message .= "Phone: $phone\n";
    $message .= "Email: $email\n";
-   $message .= "Service: $message1\n";
+   $message .= "Message: $message1\n";
 
    // Set headers
    $headers = "From: $name <$email>";
