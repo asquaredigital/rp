@@ -248,18 +248,18 @@
     <!-- End Doctor Area -->
 
     <!-- Start CTA Area -->
-      <section class="cta-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
-            <div class="container">
-                <div class="cta-content">
-                    <div class="icon">
-                        <i class="flaticon-business-and-finance"></i>
-                    </div>
-                    <h2>Emergency Medical Care 24/7</h2>
-                    <p>With access to 24 hour emergency assistance, It’s so important you can continue to help others.</p>
-                    <a href="#" class="call-us"><i class="flaticon-phone-call"></i> +91 73971 11160</a>
+    <section class="cta-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+        <div class="container">
+            <div class="cta-content">
+                <div class="icon">
+                    <i class="flaticon-business-and-finance"></i>
                 </div>
+                <h2>Emergency Medical Care 24/7</h2>
+                <p>With access to 24 hour emergency assistance, It’s so important you can continue to help others.</p>
+                <a href="#" class="call-us"><i class="flaticon-phone-call"></i> 342-875-0564</a>
             </div>
-        </section>
+        </div>
+    </section>
     <!-- End CTA Area -->
 
     <!-- Start Testimonial Area -->
